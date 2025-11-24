@@ -53,7 +53,7 @@ for start_str, end_str in date_ranges:
         time.sleep(1)  # polite delay
 
 # Save to CSV
-with open("ESPN_nba_articles_2020_2025.csv", "w", newline="", encoding="utf-8") as csvfile:
+with open("espn_nba_articles_2020_2025.csv", "w", newline="", encoding="utf-8") as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(["Title", "Link"])
     for t, l in zip(titles_found, links_found):
