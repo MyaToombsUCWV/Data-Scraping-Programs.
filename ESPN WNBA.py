@@ -5,7 +5,7 @@ import time
 
 API_KEY = "AIzaSyCLSfXFk-EHlsR_qnQujczCIxntCJIeo7Q"
 SEARCH_ENGINE_ID = "d352c226852134815"
-QUERY = "NBA"
+QUERY = "WNBA"
 
 titles_found = []
 links_found = []
@@ -45,7 +45,7 @@ for start_str, end_str in date_ranges:
         for item in data["items"]:
             title = item["title"]
             link = item["link"]
-            if "NBA" in title.upper():
+            if "WNBA" in title.upper():
                 titles_found.append(title)
                 links_found.append(link)
 
@@ -59,4 +59,4 @@ with open("espn_wnba_articles_2020_2025.csv", "w", newline="", encoding="utf-8")
     for t, l in zip(titles_found, links_found):
         writer.writerow([t, l])
 
-print(f"Saved {len(titles_found)} articles to BR_nba_articles_2020_2025.csv")
+print(f"Saved {len(titles_found)} articles to espn_wnba_articles_2020_2025.csv")
