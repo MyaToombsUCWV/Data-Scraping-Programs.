@@ -59,4 +59,4 @@ with open("ESPN_nba_articles_2020_2025.csv", "w", newline="", encoding="utf-8") 
     for t, l in zip(titles_found, links_found):
         writer.writerow([t, l])
 
-print(f"Saved {len(titles_found)} articles to BR_nba_articles_2020_2025.csv")
+print(f"Saved {len(titles_found)} articles to espn_nba_articles_2020_2025.csv")
