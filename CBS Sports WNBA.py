@@ -53,10 +53,10 @@ for start_str, end_str in date_ranges:
         time.sleep(1)  # polite delay
 
 # Save to CSV
-with open("BR_wnba_articles_2020_2025.csv", "w", newline="", encoding="utf-8") as csvfile:
+with open("cbs_wnba_articles_2020_2025.csv", "w", newline="", encoding="utf-8") as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(["Title", "Link"])
     for t, l in zip(titles_found, links_found):
         writer.writerow([t, l])
 
-print(f"Saved {len(titles_found)} articles to BR_wnba_articles_2020_2025.csv")
+print(f"Saved {len(titles_found)} articles to cbs_wnba_articles_2020_2025.csv")
